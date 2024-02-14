@@ -1,0 +1,306 @@
+/*עיצוב כללי של העמוד*/
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color:#fdb525;
+}
+
+/*עיצוב של מצב מובייל*/
+/*כפתור המבורגר*/
+.btn-mobile {
+  background-color:#fdb525;
+  border: none;
+}
+
+/*תמונה של הכפתור המבורגר*/
+.btn-mobile img{
+  width: 100%;
+  height: 50px;
+}
+
+/*תפריט ניווט*/
+nav{
+  background-color: #fdb525;
+}
+
+/*תפריט ניווט נפתח*/
+.flex-container-nav{
+  display: block;
+  gap: 60px;
+  background-color:#fdb525;
+  border-bottom: 3px solid #2a2f7d;
+  border-left: 3px solid #2a2f7d;
+  padding: 15px;
+  flex-direction: column;
+  position: absolute;
+  list-style-type: none;
+  z-index: 1;
+}
+
+/*קישורים בתפריט הניווט*/
+.flex-container-nav a{
+  color: #2a2f7d;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: 'Segoe UI';
+  font-weight: bold;
+  text-align: end;
+  vertical-align: bottom;
+} 
+
+/*סגירת תפריט הניווט*/
+.flex-container-nav.hide-mobile{
+  display: none;
+}
+
+/*רשימת הקישורים בתפריט הניווט*/
+.flex-container-nav li{
+  padding-top: 15px;
+}
+
+/*מעבר עכבר על הקישורים בתפריט הניווט*/
+a:hover{
+  color: #00B1E2;
+}
+
+/*חלק עליון של העמוד אחרי התפריט*/
+header{
+  position: relative;
+  margin-top: 30px;
+}
+
+/*תמונה בחלק עליון של העמוד אחרי התפריט*/
+.img-header{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-top: -30px;
+}
+
+/*כותרת בחלק עליון של העמוד אחרי התפריט*/
+header h1{
+  text-align: center;
+  margin-top: -100px;
+  font-size: 22px;
+  color: #2a2f7d;
+  font-weight: bold;  
+}
+
+/*חיפוש קטגוריות*/
+.search{
+  padding: 50px;
+  margin-top: 50px;
+}
+
+/*כפתור חיפוש קטגוריות*/
+.search #searchButton{
+  background-color: #2a2f7d;
+  color: white;
+  font-size: 14px;
+  padding: 4px 50px;
+  border: none;
+  margin-right: 10px;
+  height: 30px;
+}
+
+/*מצב מעבר עכבר על כפתור חיפוש קטגוריות*/
+.search #searchButton:hover{
+  background-color:#00B1E2;
+}
+
+/*תיבת טקסט לכתיבת חיפוש הקטגוריות*/
+.search #searchInput{
+font-size: 12px;
+padding: 4px 0px 4px 30px;
+border: none;
+height: 30px;
+}
+
+/*מצב לחיצה על אחת הקטגוריות הספציפיות*/
+.SpecificSearchButton:active{
+  background-color: #00B1E2;
+}
+
+/*כפתור לחיפוש ספציפי של קטגוריה*/
+.SpecificSearchButton{
+  border: none;
+  background-color: white;
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+/*כפתור איפוס קטגוריות*/
+#ResetButton{
+  border: none;
+  background-color:#fdb525;
+  margin-bottom: 5px;
+}
+
+/*תמונה של חץ לאיפוס קטגוריות*/
+#ResetButton img{
+    width: 20px;
+}
+
+/*אלמנט עוטף של כל הקטגוריות*/
+#itemsContainer{
+  display: block;
+  margin-top: -20px;  
+}
+
+/*אלמנט עוטף של כל קטגוריה*/
+.sport-item{
+  width: 90%;
+  margin-bottom: 30px;
+  margin: 40px 40px;
+}
+  
+/*מצב של מעבר עכבר על אחת הקטגוריות*/
+.sport-item:hover{
+    opacity: 70%;
+}
+
+/*כותרת קטגוריה*/
+.title {
+  font-size: 16px;
+  margin-bottom: -10px;
+  background-color:#00B1E2;
+  text-align: center; 
+  color: #2a2f7d; 
+  font-weight: bold; 
+  position: relative;
+  width:90%;
+  height: 40px;
+  align-content: center;
+  padding-top: 10px;
+}
+
+/*תמונת קטגוריה*/
+.box-img {
+  width: 90%;
+  height: auto;  
+}
+
+/*תיאור של קטגוריה*/
+.description {
+  margin-top: -40px;
+  font-size: 12px;
+  width: 90%;
+  height: 60px;
+  color: #ffffff;
+  background-color:#2a2f7d;
+  position: relative;
+  text-align: right;
+  padding: 10px;
+}
+
+
+
+/*עיצוב ממשק לווב שגודל המסך הוא מינימום 600 פיקסל*/
+@media only screen and (min-width: 600px) {
+
+/*תפריט ניווט*/
+.flex-container-nav{
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      width: 100%;
+      border: none;
+}
+
+/*הצגת תפריט הניווט לווב*/
+.flex-container-nav.hide-mobile{
+      display: flex;
+}
+ 
+/*קישורים בתפריט הניווט*/
+.flex-container-nav a{
+    font-size: 18px;
+} 
+
+/*העלמת תפריט ההמבורגר בווב*/
+.btn-mobile{
+      display: none;
+}
+
+/*אלמנט עוטף של כל קטגוריה*/
+.sport-item {
+  width: 20%; 
+}
+
+/*תמונה של הקטגוריה*/
+ .box-img {
+  width: 100%;
+  height: auto;
+}
+
+/*כותרת של הקטגוריה*/
+.title {
+  font-size: 18px;
+  width: 100%;
+  height: 40px;
+}
+ 
+/*תיאור של הקטגוריה*/
+.description {
+  font-size: 14px;
+  width: 100%;
+  height: 120px;  
+}
+
+/*אלמנט עוטף של החלק העליון של העמוד*/
+header{
+  margin-top: -5px;
+}
+
+/*תמונה של החלק העליון של העמוד*/
+.img-header{
+  height: 350px;
+  margin-top: -12px;
+}
+
+/*כותרת מרכזית בעמוד*/
+header h1{
+  margin-top: -180px;
+  font-size: 40px;
+}
+
+/*פריסה של הקטגוריות*/
+#itemsContainer{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/*אלמנט עוטף של החיפוש*/
+.search{
+  padding: 100px 0px;;
+  margin-top: 50px;
+}
+
+/*כפתור חיפוש קטגוריה*/
+.search #searchButton{
+  font-size: 20px;
+  height:40px;
+}
+
+/*תיבת טקסט להקלדת הקטגוריה*/
+.search #searchInput{
+  font-size: 16px;
+  padding: 8px 0px 4px 100px;
+  height: 40px;
+}
+
+/*אלמנט עוטף של כפתורי החיפוש הספציפיים*/
+.SpecificSearchButton{
+    font-size: 16px;
+    margin-right: 15px;
+}
+
+/*תמונה של כפתור איפוס הקטגוריות*/
+#ResetButton img{
+    width: 40px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+  }
+}
